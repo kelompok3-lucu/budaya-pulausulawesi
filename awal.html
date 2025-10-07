@@ -1,0 +1,167 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Selamat Datang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      background: linear-gradient(135deg, #B8926A, #f5f5dc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .bg-bubble {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      bottom: -100px;
+      animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-1200px) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    #landing {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      padding: 3rem 4rem;
+      border-radius: 2rem;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .landing-img {
+      width: 23rem;
+      height: 15rem;
+      border-radius: 1rem;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 6px solid rgba(255,255,255,0.7);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+    }
+
+    .landing-img:hover {
+      transform: scale(1.05) rotate(-2deg);
+      box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+    }
+
+    #landing h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff7f9;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #landing a {
+      background: #6F4D38;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      display: inline-block;
+    }
+
+    #landing a:hover {
+      background: #f4a460;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .bubbles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .bubbles span {
+      position: absolute;
+      bottom: -100px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      animation: animate 10s linear infinite;
+    }
+
+    .bubbles span:nth-child(1) { left: 25%; width: 40px; height: 40px; animation-duration: 9s; }
+    .bubbles span:nth-child(2) { left: 10%; width: 25px; height: 25px; animation-duration: 12s; animation-delay: 2s; }
+    .bubbles span:nth-child(3) { left: 70%; width: 30px; height: 30px; animation-duration: 8s; animation-delay: 4s; }
+    .bubbles span:nth-child(4) { left: 50%; width: 50px; height: 50px; animation-duration: 10s; animation-delay: 1s; }
+    .bubbles span:nth-child(5) { left: 85%; width: 35px; height: 35px; animation-duration: 11s; animation-delay: 3s; }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-800px) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="landing">
+    <img src="fadiyah.jpg" alt="Fadiyah Nurul Ilmi" class="landing-img">
+    <h1>SELAMAT DATANG!</h1>
+    <a href="index.html">Masuk</a>
+  </div>
+</body>
+</html>
